@@ -7,6 +7,7 @@ class CfgWeapons {
     class rhs_weap_svdp;
     class rhs_weap_svdp_npz;
     class Uniform_Base;
+    class UniformItem;
 
     class arifle_RWR_ak74m: rhs_weap_ak74m {
         displayname = "AK-74M (Winter)";
@@ -47,12 +48,44 @@ class CfgWeapons {
         rhs_npz = "srifle_RWR_svdp";
     };
 
+    class U_O_RWR_Overall_noarmor: Uniform_Base {
+		author = "Pyro, johnb43";
+		scope = 2;
+		displayName = "Klyaksa Winter Overall";
+		picture = "\RWR_units\icons\RWR_icon_overall_ca.paa";
+		model = "\A3\Characters_F\Common\Suitpacks\suitpack_blufor_soldier";
+		hiddenSelections[] = {"camo1"};
+		hiddenSelectionsTextures[] = {"RWR_gear\data\U_O_RWR_Overall_co.paa"};
+		class ItemInfo: UniformItem {
+			uniformModel = "-";
+			uniformClass = "U_O_RWR_Overall_noarmor";
+			containerClass = "Supply40";
+			mass = 40;
+		};
+	};
+	class U_O_RWR_m88emr_noarmor: Uniform_Base {
+		author = "Pyro, johnb43";
+		scope = 2;
+		displayName = "EMR-Winter";
+		picture = "\RWR_units\icons\RWR_icon_uni_emr_ca.paa";
+		model = "\A3\Characters_F\Common\Suitpacks\suitpack_blufor_soldier";
+		hiddenSelections[] = {"camo1","camo2","camob","insignia"};
+		hiddenSelectionsTextures[] = {"\RWR_gear\data\U_O_RWR_m88emr_co.paa","",""};
+		class ItemInfo: UniformItem {
+			uniformModel = "-";
+			uniformClass = "U_O_RWR_m88emr_noarmor";
+			containerClass = "Supply40";
+			mass = 40;
+		};
+	};
 
     class U_O_RWR_m88emr: Uniform_Base {
         displayName = "EMR-Winter";
+        scope = 1;
     };
 
     class U_O_RWR_Overall: Uniform_Base {
         displayName = "Klyaksa Winter Overall";
+        scope = 1;
     };
 };

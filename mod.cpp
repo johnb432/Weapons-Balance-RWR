@@ -1,6 +1,5 @@
-name = "Weapons balance - Russian Winter Retextures";
+name = "Weapons Balance - Russian Winter Retextures";
 description = "A collection of balancing mods made by johnb43";
-tooltip = "Weight balance";
-tooltipOwned = "Weight balance";
-overview = "";
+tooltip = "Weapons Balance - Russian Winter Retextures";
+tooltipOwned = "Weapons Balance - Russian Winter Retextures";
 author = "johnb43";
