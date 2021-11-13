@@ -4,16 +4,32 @@ class CfgPatches {
     class ADDON {
         name = COMPONENT_NAME;
         units[] = {};
-        weapons[] = {
-            "U_O_RWR_Overall_noarmor",
-            "U_O_RWR_m88emr_noarmor"
-        };
+        weapons[] = {};
         requiredVersion = REQUIRED_VERSION;
         requiredAddons[] = {
             "RWR_weapons",
             "RWR_gear"
         };
         author = "johnb43";
+        url = "https://github.com/johnb432/Weapons-Balance-RWR";
+        VERSION_CONFIG;
+    };
+};
+
+class CfgMods {
+    class PREFIX {
+        name = "Weapons Balance - Russian Winter Retextures";
+        author = "johnb43";
+        tooltipOwned = "Weapons Balance - Russian Winter Retextures";
+        hideName = 0;
+        hidePicture = 0;
+        actionName = "Github";
+        action = "https://github.com/johnb432/Weapons-Balance-RWR";
+        description = "A collection of balancing mods made by johnb43.";
+        overview = "A collection of balancing mods made by johnb43.";
+        picture = "\z\wb_rwr\addons\main\ui\logo_weapons_balance.paa"; // http://getdrawings.com/get-drawing#gun-drawing-in-pencil-27.jpg, http://getdrawings.com/get-drawing#gun-drawing-in-pencil-17.png
+        logo = "\z\wb_rwr\addons\main\ui\logo_weapons_balance.paa";
+        overviewPicture = "\z\wb_rwr\addons\main\ui\logo_weapons_balance.paa";
     };
 };
 
@@ -26,37 +42,11 @@ class CfgMagazines {
     };
 };
 
-// This is for armor removal: New items are created without armor and the old ones are hidden
+// This is for armor removal: Inherit from different class
 class CfgVehicles {
-	class B_Soldier_base_F;
-	class U_O_RWR_Overall_noarmor: B_Soldier_base_F {
-		author = "Pyro, johnb43";
-		scope = 1;
-		scopeCurator = 0;
-		scopeArsenal = 0;
-		displayName = "$STR_U_O_RWR_Overall";
-		model = "\rhsafrf\addons\rhs_infantry2\rhs_gorka_base.p3d";
-		uniformClass = "U_O_RWR_Overall";
-		class Wounds {
-			tex[] = {};
-			mat[] = {"rhsafrf\addons\rhs_infantry2\data\gorkaR.rvmat","rhsafrf\addons\rhs_infantry2\data\gorkaR_w1.rvmat","rhsafrf\addons\rhs_infantry2\data\gorkaR_w2.rvmat"};
-		};
-		hiddenSelections[] = {"camo1"};
-		hiddenSelectionsTextures[] = {"RWR_gear\data\U_O_RWR_Overall_co.paa"};
-	};
-	class U_O_RWR_m88emr_noarmor: B_Soldier_base_F {
-		author = "Pyro, johnb43";
-		scope = 1;
-		scopeCurator = 0;
-		scopeArsenal = 0;
-		displayName = "$STR_U_O_RWR_emr";
-		model = "\rhsafrf\addons\rhs_infantry\rhs_msv_base.p3d";
-		uniformClass = "U_O_RWR_m88emr";
-		class Wounds {
-			tex[] = {};
-			mat[] = {"rhsafrf\addons\rhs_infantry\data\flora.rvmat","rhsafrf\addons\rhs_infantry\data\flora_w1.rvmat","rhsafrf\addons\rhs_infantry\data\flora_w2.rvmat","rhsafrf\addons\rhs_infantry\data\flora_bz.rvmat","rhsafrf\addons\rhs_infantry\data\flora_bz_w1.rvmat","rhsafrf\addons\rhs_infantry\data\flora_bz_w2.rvmat","rhsafrf\addons\rhs_infantry\data\flora_vydra.rvmat","rhsafrf\addons\rhs_infantry\data\flora_vydra_w1.rvmat","rhsafrf\addons\rhs_infantry\data\flora_vydra_w2.rvmat","rhsafrf\addons\rhs_infantry\data\6b23.rvmat","rhsafrf\addons\rhs_infantry\data\6b23_w1.rvmat","rhsafrf\addons\rhs_infantry\data\6b23_w2.rvmat"};
-		};
-		hiddenSelections[] = {"camo1","camo2","camob","insignia"};
-		hiddenSelectionsTextures[] = {"\RWR_gear\data\U_O_RWR_m88emr_co.paa","",""};
-	};
+    class rhs_vdv_gorka_r_y_rifleman;
+    class U_O_RWR_Overall: rhs_vdv_gorka_r_y_rifleman {};
+
+    class rhs_msv_emr_rifleman_patchless;
+    class U_O_RWR_m88emr: rhs_msv_emr_rifleman_patchless {}
 };
