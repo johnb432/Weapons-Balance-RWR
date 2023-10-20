@@ -11,7 +11,9 @@ class CfgPatches {
             "RWR_gear"
         };
         author = "johnb43";
-        authors[] = {"johnb43"};
+        authors[] = {
+            "johnb43"
+        };
         url = "https://github.com/johnb432/Weapons-Balance-RWR";
         VERSION_CONFIG;
     };
@@ -32,5 +34,5 @@ class CfgVehicles {
     class U_O_RWR_Overall: rhs_vdv_gorka_r_y_rifleman {};
 
     class rhs_msv_emr_rifleman_patchless;
-    class U_O_RWR_m88emr: rhs_msv_emr_rifleman_patchless {}
+    class U_O_RWR_m88emr: rhs_msv_emr_rifleman_patchless {};
 };

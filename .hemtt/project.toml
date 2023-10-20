@@ -13,9 +13,3 @@ include = [
     "LICENSE",
     "README.md"
 ]
-
-[binarize]
-enabled = false
-
-[asc]
-enabled = true
